@@ -1,0 +1,27 @@
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <h1 class="navbar-brand">The Tech Blog</h1>
+        </div>
+    </nav>
+{{!-- loop over each object in the post array --}}
+{{#each posts as |post| }}
+
+{{!-- <div class="card text-bg-primary mb-3 w-75">
+    <div class="card-header">{{post.title}}</div>
+    <div class="card-body">
+        <h5 class="card-title">Posted by {{post.user.username}} on {{post.date}}</h5>
+        <p class="card-text">{{post.content}}</p>
+    </div>
+</div> --}}
+
+<div class="card ">
+  <div class="card-header ">
+    {{post.title}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Posted by {{post.user.username}} on {{post.date}}</h5>
+    <p class="card-text">{{post.content}}</p>
+  </div>
+</div>
+
+    {{/each}}
